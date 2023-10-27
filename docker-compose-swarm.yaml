@@ -1,8 +1,8 @@
 services:
     web:
-	image: mladenov1990/bgapp-web
-	deploy:
-	    replicas: 5
+        image: mladenov1990/bgapp-web
+        deploy:
+              replicas: 5
         ports:
             - 8080:80
         volumes:
@@ -10,12 +10,12 @@ services:
         networks:
             - app-network
     db:
-	image: mladenov1990/bgapp-db
+        image: mladenov1990/bgapp-db
         networks:
             - app-network
         environment:
             MYSQL_ROOT_PASSWORD_FILE: /run/secrets/db_root_password
-	secrets:
+        secrets:
             - db_root_password
 secrets:
     db_root_password:
