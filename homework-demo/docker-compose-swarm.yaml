@@ -16,7 +16,7 @@ services:
             - homework-net
         environment:
             MYSQL_ROOT_PASSWORD_FILE: /run/secrets/db_root_password
-	secrets:
+        secrets:
             - db_root_password
 secrets:
     db_root_password:
